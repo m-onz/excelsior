@@ -1,0 +1,16 @@
+#N canvas 98 350 450 300 10;
+#X obj 29 103 mod_counter;
+#X floatatom 92 81 5 0 0 0 - - -;
+#X obj 29 31 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 29 170 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 93 38 loadbang;
+#X msg 93 60 2;
+#X text 111 105 set modulus.. will bang when internal counter % right
+inlet val == 0;
+#X connect 0 0 3 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X connect 4 0 5 0;
+#X connect 5 0 1 0;

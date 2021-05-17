@@ -1,0 +1,17 @@
+#N canvas 1 67 450 300 10;
+#X obj 34 191 thru;
+#X obj 34 74 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 34 265 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 185 114 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 74 264 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X text 98 211 thru allows you disconnect the sender and reciever so
+that you can re-route the output to a different place without re-wiring.
+;
+#X text 120 33 thru. pass-though utility.;
+#X connect 0 0 2 0;
+#X connect 1 0 0 0;
+#X connect 3 0 0 0;

@@ -1,0 +1,12 @@
+#N canvas 1 67 488 627 10;
+#X text 11 12 Excelsior;
+#X text 11 44 Welcome to excelsior: Live coding and algorithmic composition
+toolkit Installation: install pdjs via help/get externals add the path
+to this folder via file/ preferences / path list of externals;
+#X text 11 120 Timing and transport;
+#X obj 12 149 mod_transport, f 36;
+#X text 12 276 Util, f 8;
+#X obj 13 300 thru;
+#X obj 12 178 mod_counter;
+#X text 10 346 Audio;
+#X obj 12 369 sample, f 9;

@@ -1,0 +1,22 @@
+#N canvas 396 369 450 300 10;
+#X obj 16 93 sample, f 10;
+#X obj 16 22 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 44 60 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
+-1;
+#X obj 15 198 *~ 0.5;
+#X obj 15 240 dac~;
+#X text 66 57 play sound;
+#X text 35 17 open sound with file dialog;
+#X obj 73 114 print;
+#X msg 108 86 /home/monz/Desktop/AlgoBeat1/sound/fx/30.wav;
+#X text 204 61 load a file using its path...;
+#X text 101 156 sample loads a sound into a table and triggers the
+sound using a bang;
+#X connect 0 0 3 0;
+#X connect 0 1 7 0;
+#X connect 1 0 0 0;
+#X connect 2 0 0 1;
+#X connect 3 0 4 0;
+#X connect 3 0 4 1;
+#X connect 8 0 0 2;
