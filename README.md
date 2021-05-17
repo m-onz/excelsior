@@ -24,6 +24,13 @@ Welcome to excelsior: Live coding and algorithmic composition toolkit. Designed 
 
 * sample - store a one-shot sound and play it
 
+### `Sound sources`
+
+* kick
+* snare
+* hihat
+* clap
+
 ## `dependencies`
 
 * [pdjs](https://github.com/mganss/pdjs)
