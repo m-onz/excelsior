@@ -1,6 +1,6 @@
 # `excelsior`
 
-Welcome to excelsior: Live coding and algorithmic composition toolkit. Designed to work with vanilla pd and limitied dependencies.
+Welcome to excelsior: Live coding and algorithmic composition toolkit. Designed to work with vanilla pd and limited dependencies.
 
 ## `Installation`
 
