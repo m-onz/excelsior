@@ -1,4 +1,4 @@
-#N canvas 406 182 450 512 10;
+#N canvas 397 174 450 512 10;
 #X obj 14 56 mod_transport, f 36;
 #X obj 14 76 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
@@ -26,18 +26,34 @@
 -1;
 #X obj 67 255 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144 -1
 -1;
-#X obj 38 393 *~ 0.5;
-#X obj 38 435 dac~;
+#X obj 38 427 *~ 0.5;
+#X obj 38 469 dac~;
 #X text 89 252 play sound;
 #X text 58 212 open sound with file dialog;
-#X obj 339 11 loadbang;
-#X obj 339 81 del 2000;
+#X obj 130 10 loadbang;
+#X obj 130 31 del 2000;
 #X obj 67 180 mod_counter;
 #X msg 130 278 /home/monz/Desktop/AlgoBeat1/sound/hihats/7.wav;
 #X msg 209 109 2;
 #X floatatom 201 135 5 0 0 0 - - -;
 #X msg 235 109 4;
 #X msg 261 109 8;
+#X obj 326 351 clap;
+#X obj 327 309 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 326 328 thru;
+#X obj 223 305 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 222 324 thru;
+#X obj 224 347 kick;
+#X obj 254 306 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 253 325 thru;
+#X obj 255 348 snare;
+#X obj 289 307 bng 15 250 50 0 empty empty empty 17 7 0 10 -262144
+-1 -1;
+#X obj 288 326 thru;
+#X obj 290 349 hihat;
 #X connect 0 0 1 0;
 #X connect 0 1 2 0;
 #X connect 0 2 3 0;
@@ -47,7 +63,12 @@
 #X connect 0 6 7 0;
 #X connect 0 7 8 0;
 #X connect 0 8 9 0;
-#X connect 2 0 21 0;
+#X connect 3 0 36 0;
+#X connect 4 0 21 0;
+#X connect 5 0 30 0;
+#X connect 6 0 30 0;
+#X connect 7 0 28 0;
+#X connect 8 0 33 0;
 #X connect 10 0 0 0;
 #X connect 11 0 0 1;
 #X connect 12 0 15 0;
@@ -65,3 +86,15 @@
 #X connect 24 0 21 1;
 #X connect 25 0 24 0;
 #X connect 26 0 24 0;
+#X connect 27 0 15 0;
+#X connect 28 0 29 0;
+#X connect 29 0 27 0;
+#X connect 30 0 31 0;
+#X connect 31 0 32 0;
+#X connect 32 0 15 0;
+#X connect 33 0 34 0;
+#X connect 34 0 35 0;
+#X connect 35 0 15 0;
+#X connect 36 0 37 0;
+#X connect 37 0 38 0;
+#X connect 38 0 15 0;
