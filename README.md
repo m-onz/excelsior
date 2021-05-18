@@ -19,6 +19,7 @@ Welcome to excelsior: Live coding and algorithmic composition toolkit. Designed 
 ### `Util`
 
 * thru - pass though object
+* sonograph
 
 ### `Audio`
 
@@ -26,13 +27,17 @@ Welcome to excelsior: Live coding and algorithmic composition toolkit. Designed 
 
 ### `Sound sources`
 
-* kick
+* fm - fm synth object
+* kick - synthesized kick sound
 * snare
 * hihat
 * clap
 
-## `dependencies`
+### `dependencies`
 
 * [pdjs](https://github.com/mganss/pdjs)
 
+### `references`
+
+...
 
