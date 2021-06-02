@@ -1,0 +1,2 @@
+#N canvas 529 205 450 300 10;
+#X obj 50 30 compressor;

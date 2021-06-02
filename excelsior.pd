@@ -1,0 +1,7 @@
+#N canvas 0 67 1366 675 10;
+#X text 7 5 excelsior - m-onz;
+#X text 25 30 object list beatslicer clap compressor fm hihat kick
+mod_counter mod_transport sample snare spectrolog yelltron;
+#X text 387 27 todo thru thru~ sub wavetable wavescanner mono synth
+examples testing documentation;
+#X text 724 25 add soundbank add wavetable bank;

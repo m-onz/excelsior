@@ -1,5 +1,6 @@
-#N canvas 183 193 750 548 10;
-#N canvas 255 82 1068 584 yellotron 0;
+#N canvas 147 161 750 548 10;
+#X declare -path ./Yellotron;
+#N canvas 237 67 1068 584 yellotron 1;
 #N canvas 417 264 450 403 armoire 0;
 #X obj 20 36 table tab_43;
 #X obj 20 55 table tab_44;
@@ -248,7 +249,7 @@ numbers in the [sel] objects.;
 #X obj 274 611 route 1 2 3 4 5 6;
 #X obj 868 447 s release;
 #X obj 114 162 hsl 128 15 10 1000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 700 1;
+-262144 -1 -1 2437 1;
 #X floatatom 916 428 5 0 0 0 - - -;
 #X obj 868 472 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
@@ -260,7 +261,7 @@ numbers in the [sel] objects.;
 #X obj 868 534 s octave;
 #X obj 583 462 r octave;
 #X obj 271 143 vradio 15 1 0 10 empty empty empty 0 -8 0 10 -262144
--1 -1 0;
+-1 -1 2;
 #X text 292 143 MkII Flute;
 #X text 292 157 M300A;
 #X text 292 172 M300B;
@@ -272,7 +273,7 @@ numbers in the [sel] objects.;
 #X text 292 263 Woodwind;
 #X text 292 278 GC3 Brass;
 #X obj 114 200 hsl 128 15 0 0.125 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 0 1;
+-262144 -1 -1 6350 1;
 #X obj 867 632 s pitch;
 #X obj 867 607 - 0.0625;
 #X obj 331 498 notein;
@@ -302,7 +303,7 @@ output (dac).;
 #X obj 463 699 yelloscillator;
 #X text 961 819 Pierre Massat \, Guitar Extended \, 2014;
 #X text 268 120 Choose an instrument.;
-#X obj 931 78 loadbang;
+#X obj 935 87 loadbang;
 #X msg 934 112 2;
 #X obj 37 38 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
 0;
@@ -313,6 +314,7 @@ output (dac).;
 #X obj 306 780 outlet~;
 #X obj 276 8 inlet;
 #X obj 310 33 inlet;
+#X obj 355 58 declare -path ./Yellotron;
 #X connect 4 0 17 0;
 #X connect 5 0 18 0;
 #X connect 6 0 11 0;

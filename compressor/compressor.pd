@@ -1,0 +1,12 @@
+#N canvas 1 67 673 387 10;
+#X obj 127 38 tb_compressor~;
+#X obj 123 132 tb_compressorUI;
+#X obj 126 13 inlet~;
+#X obj 127 61 outlet~;
+#X obj 17 13 cnv 15 100 60 empty empty empty 20 12 0 14 -233017 -66577
+0;
+#X connect 0 0 3 0;
+#X connect 0 1 1 0;
+#X connect 1 0 0 1;
+#X connect 2 0 0 0;
+#X coords 0 -1 1 1 350 210 1 100 100;
