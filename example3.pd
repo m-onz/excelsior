@@ -1,17 +1,17 @@
-#N canvas 1 67 1364 674 10;
+#N canvas 0 67 1366 675 10;
 #X declare -path ./Yellotron;
 #X declare -path ./beatslicer;
 #N canvas 1 67 1364 674 beatslicer 0;
 #N canvas 1 67 450 250 (subpatch) 0;
-#X array \$0-sample-L 121655 float 2;
-#X coords 0 1 121655 -1 448 100 1;
+#X array \$0-sample-L 944016 float 2;
+#X coords 0 1 944016 -1 448 100 1;
 #X restore 178 124 graph;
 #N canvas 1 67 450 250 (subpatch) 0;
-#X array \$0-sample-R 121655 float 2;
-#X coords 0 1 121655 -1 448 100 1;
+#X array \$0-sample-R 944016 float 2;
+#X coords 0 1 944016 -1 448 100 1;
 #X restore 178 224 graph;
 #X obj 179 334 hradio 14 1 0 32 empty empty empty 0 -8 0 10 -262144
--1 -1 29;
+-1 -1 30;
 #N canvas 605 396 441 345 read-file 0;
 #X obj 35 51 openpanel;
 #X obj 35 241 soundfiler;
@@ -40,7 +40,7 @@
 #X obj 761 266 f 0;
 #X obj 793 266 + 1;
 #X floatatom 761 314 5 0 0 0 - - -;
-#X obj 114 170 tgl 30 0 empty empty Play 35 7 0 10 -262144 -1 -1 1
+#X obj 114 170 tgl 30 0 empty empty Play 35 7 0 10 -262144 -1 -1 0
 1;
 #X obj 761 242 metro 200;
 #X obj 825 236 expr ($f1 / 32) / 44.1;
@@ -727,7 +727,7 @@ numbers in the [sel] objects.;
 #X obj 274 611 route 1 2 3 4 5 6;
 #X obj 868 447 s release;
 #X obj 114 162 hsl 128 15 10 1000 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 4937 1;
+-262144 -1 -1 2437 1;
 #X floatatom 916 428 5 0 0 0 - - -;
 #X obj 868 472 hradio 15 1 0 2 empty empty empty 0 -8 0 10 -262144
 -1 -1 0;
@@ -751,7 +751,7 @@ numbers in the [sel] objects.;
 #X text 292 263 Woodwind;
 #X text 292 278 GC3 Brass;
 #X obj 114 200 hsl 128 15 0 0.125 0 0 empty empty empty -2 -8 0 10
--262144 -1 -1 2550 1;
+-262144 -1 -1 6350 1;
 #X obj 867 632 s pitch;
 #X obj 867 607 - 0.0625;
 #X obj 331 498 notein;
@@ -1250,7 +1250,7 @@ energie;
 #X msg 423 273 wet \$1;
 #X msg 471 274 dry \$1;
 #X obj 112 147 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 0 1;
+-1 -1 4000 1;
 #N canvas 1 80 450 300 inv 0;
 #X obj 154 69 inlet;
 #X obj 154 179 outlet;
@@ -1288,7 +1288,7 @@ energie;
 #X msg 423 273 wet \$1;
 #X msg 471 274 dry \$1;
 #X obj 112 147 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 7800 1;
+-1 -1 12500 1;
 #N canvas 1 80 450 300 inv 0;
 #X obj 154 69 inlet;
 #X obj 154 179 outlet;
@@ -1341,7 +1341,7 @@ energie;
 #X msg 423 273 wet \$1;
 #X msg 471 274 dry \$1;
 #X obj 112 147 hsl 128 15 0 1 0 0 empty empty empty -2 -8 0 10 -262144
--1 -1 4800 1;
+-1 -1 0 1;
 #N canvas 1 80 450 300 inv 0;
 #X obj 154 69 inlet;
 #X obj 154 179 outlet;
@@ -6267,6 +6267,8 @@ A=−a1/a0 B=−a2/a0 C=b0/a0 D=b1/a0 E=b2/a0, f 57;
 #X obj 1035 51 declare -path ./Yellotron;
 #X obj 1041 24 declare -path ./beatslicer;
 #X obj 925 463 compressor;
+#X obj 336 530 limiter;
+#X obj 683 43 noise~;
 #X connect 0 0 1 0;
 #X connect 0 2 3 0;
 #X connect 0 2 26 0;
@@ -6372,5 +6374,6 @@ A=−a1/a0 B=−a2/a0 C=b0/a0 D=b1/a0 E=b2/a0, f 57;
 #X connect 88 0 80 0;
 #X connect 89 0 1 0;
 #X connect 90 0 87 0;
-#X connect 93 0 2 0;
-#X connect 93 0 2 1;
+#X connect 93 0 94 0;
+#X connect 94 0 2 1;
+#X connect 94 0 2 0;
