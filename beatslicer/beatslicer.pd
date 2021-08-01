@@ -1,15 +1,15 @@
-#N canvas 0 67 1366 675 10;
+#N canvas 1 67 1364 674 10;
 #X declare -Path ./beatslicer;
 #N canvas 1 67 450 250 (subpatch) 0;
-#X array \$0-sample-L 211680 float 2;
-#X coords 0 1 211680 -1 448 100 1 0 0;
+#X array \$0-sample-L 944016 float 2;
+#X coords 0 1 944016 -1 448 100 1 0 0;
 #X restore 178 137 graph;
 #N canvas 1 67 450 250 (subpatch) 0;
-#X array \$0-sample-R 211680 float 2;
-#X coords 0 1 211680 -1 448 100 1 0 0;
+#X array \$0-sample-R 944016 float 2;
+#X coords 0 1 944016 -1 448 100 1 0 0;
 #X restore 178 237 graph;
 #X obj 179 347 hradio 14 1 0 32 empty empty empty 0 -8 0 10 -262144
--1 -1 4;
+-1 -1 22;
 #N canvas 605 396 441 345 read-file 0;
 #X obj 35 51 openpanel;
 #X obj 35 241 soundfiler;
@@ -166,7 +166,7 @@
 #X msg 213 331 symbol start-pos;
 #X obj 216 438 t a;
 #X obj 295 290 t f;
-#X obj 100 20 tgl 14 0 empty empty empty -62 7 0 10 -262144 -1 -1 0
+#X obj 100 20 tgl 14 0 empty empty empty -62 7 0 10 -262144 -1 -1 1
 1;
 #X obj 323 237 t b b f;
 #X obj 137 292 t b;
@@ -436,6 +436,7 @@
 #X coords 0 -1 1 1 448 200 2 100 100;
 #X restore 179 371 pd controls;
 #X obj 283 57 declare -Path ./beatslicer;
+#X obj 936 551 outlet;
 #X connect 2 0 34 0;
 #X connect 3 0 38 0;
 #X connect 4 0 3 0;
@@ -445,6 +446,7 @@
 #X connect 7 0 6 1;
 #X connect 8 0 2 0;
 #X connect 9 0 10 0;
+#X connect 9 0 50 0;
 #X connect 10 0 6 0;
 #X connect 10 0 44 0;
 #X connect 11 0 10 1;
